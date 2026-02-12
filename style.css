@@ -46,6 +46,14 @@ body{
   max-height: 79px;
   height: 100%;
 }
+.stats{
+  
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+
+}
 
 .stat h2 {
   color: #ff2a2a;
@@ -200,5 +208,48 @@ height: 100%;
     max-width: 420px;
     justify-content: center;
   }
+}
+@media (max-width: 375px) {
+  .heading-text h1 {
+    font-size: 26px;
+    line-height: 120%;
+   
+  }
+  .heading-text{
+    max-width: 100%;
+    width: 221px;
+  }
+  .heading-para p{
+    font-size: 14px;
+    line-height: 160%;
+    max-width: 336px;
+    width: 100%;
+    margin: 3px auto;
+  }
+  .heading-para{
+    max-width: 100%;
+    width: 343px;
+  }
+  .stats{
+    max-width: 359px;
+    width: 100%;
+  }
+  .para{
+    max-width: 336px;
+    width: 100%;
+     font-size: 14px;
+    line-height: 160%;
+  }
+
+  .btn-container {
+    gap: 20px;
+    
+  }
+  .stat{
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 120%;
+  }
+
 }
 

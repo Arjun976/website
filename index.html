@@ -5,19 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+
+    <!-- google fonts link -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italianno&family=Manufacturing+Consent&family=Playwrite+AU+QLD:wght@100..400&display=swap" rel="stylesheet">
   </head>
   <body>
    
    <div class="main">
 
   <picture class="images">
-    <source media="(max-width: 375px)" srcset="./images/mobile.png">
-    <source media="(max-width: 768px)" srcset="./images/Frame 16868.png">
+    <source media="(max-width: 767px)" srcset="./images/mobile.png">
+    <source media="(min-width: 768px)" srcset="./images/ipad.png" >
+    <source media="(min-width: 1200px)" srcset="./images/desktop.png" >
     <img src="./images/Group 14.png" alt="Interior design" />
   </picture>
 
-  <div class="texts">
-    <div class="heading">
+  <!-- <div class="texts">
+    
+  </div> -->
+  <div class="heading">
       <div class="heading-text">
         <h1>Bringing Dreams to Life in UAE</h1>
       </div>
@@ -53,7 +61,6 @@
       <button class="btnx"><span>About us</span><span class="arrow-box">→</span></button>
       <button class="btn-secondary">Learn More</button>
     </div>
-  </div>
 </div>
 
   </body>

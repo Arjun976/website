@@ -1,0 +1,132 @@
+/* Reset / base for the form container */
+.cntct-form {
+    max-width: 500px;           /* adjust as needed */
+    margin: 40px auto;
+    padding: 30px 25px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    border: 1px solid #e0e0e0;
+}
+
+/* List and items */
+.form-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.input-data {
+    margin-bottom: 28px;
+    position: relative;
+}
+
+.input-data.hlf-width {
+    display: inline-block;
+    width: 48%;
+    margin-right: 4%;
+}
+
+.input-data.hlf-width:nth-child(even) {
+    margin-right: 0;
+}
+
+/* The magic wrapper */
+.frm-wrap {
+    position: relative;
+    display: block;
+}
+
+/* Input / textarea base styles */
+.cntct-form-control,
+.textarea-field {
+    width: 100%;
+    padding: 14px 14px 10px;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #fafafa;
+    transition: all 0.25s ease;
+    box-sizing: border-box;
+}
+
+.textarea-field {
+    min-height: 110px;
+    resize: vertical;
+}
+
+/* Remove default placeholder opacity trick */
+.cntct-form-control::placeholder {
+    opacity: 0;
+}
+
+/* Floating label */
+.frm-wrap label {
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    color: #888;
+    font-size: 16px;
+    pointer-events: none;
+    transform-origin: left top;
+    transition: all 0.25s ease;
+}
+
+/* When focused OR has value → float up */
+.frm-wrap .cntct-form-control:focus + label,
+.frm-wrap .cntct-form-control:not(:placeholder-shown) + label,
+.frm-wrap .textarea-field:focus + label,
+.frm-wrap .textarea-field:not(:placeholder-shown) + label {
+    top: -9px;
+    font-size: 12.5px;
+    color: #066B71;
+    background: white;
+    padding: 0 6px;
+    font-weight: 500;
+}
+
+/* Focus state for input */
+.cntct-form-control:focus,
+.textarea-field:focus {
+    border-color: #066B71;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(6, 107, 113, 0.12);
+    outline: none;
+}
+
+/* Submit button styling (your <a> element) */
+.btn-typ1 {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #066B71;
+    color: white;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-typ1:hover {
+    background: #05555a;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(6, 107, 113, 0.25);
+}
+
+.btn-arrow svg {
+    transition: transform 0.25s ease;
+}
+
+.btn-typ1:hover .btn-arrow svg {
+    transform: translateX(4px);
+}
+
+/* Button wrapper alignment */
+.btn-wrapper {
+    text-align: right;
+    margin-top: 20px;
+}
