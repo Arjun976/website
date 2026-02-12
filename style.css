@@ -96,8 +96,8 @@ body{
         overflow: hidden;
 }
 .btn-container {
-  margin-top: auto;   /* pushes it to bottom */
-  align-self: flex-start; /* keeps it left */
+  margin-top: auto;   
+  align-self: flex-start; 
   max-width: 310px;
   width: 100%;
   max-height: 52px;
@@ -149,7 +149,7 @@ height: 100%;
   .main {
     flex-direction: column;
     height: auto;
-    align-items: center;
+   
   }
 
   .texts {
@@ -175,19 +175,25 @@ height: 100%;
     max-width: 420px;
     margin: 20px auto;
   }
+  img{
+    justify-self: center;
+  }
 
   .stats {
     order: 3;
     width: 100%;
     max-width: 420px;
     justify-content: center;
+    align-items: flex-start;
   }
 
   .para {
     order: 4;
     width: 100%;
-    max-width: 420px;
-    text-align: center;
+    font-size: 16px;
+    line-height: 160%;
+    max-width: 696px;
+    padding-left: 36px;
   }
 
   .btn-container {
