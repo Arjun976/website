@@ -7,61 +7,65 @@
     <link rel="stylesheet" href="style.css" />
 
     <!-- google fonts link -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italianno&family=Manufacturing+Consent&family=Playwrite+AU+QLD:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italianno&family=Manufacturing+Consent&family=Playwrite+AU+QLD:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-   
-   <div class="main">
+    <div class="main">
+      <picture class="images">
+        <source media="(min-width: 1200px)" srcset="./images/desktop.png" />
+        <source media="(min-width: 768px)" srcset="./images/ipad.png" />
+        <source media="(max-width: 767px)" srcset="./images/mobile.png" />
+        <img src="./images/mobile.png" alt="Interior design" />
+      </picture>
 
- <picture class="images">
-  <source media="(min-width: 1200px)" srcset="./images/desktop.png">
-  <source media="(min-width: 768px)" srcset="./images/ipad.png">
-  <source media="(max-width: 767px)" srcset="./images/mobile.png">
-  <img src="./images/mobile.png" alt="Interior design" />
-</picture>
+      <div class="texts">
+        <div class="heading">
+          <div class="heading-text">
+            <h1>Bringing Dreams to Life in UAE</h1>
+          </div>
+          <div class="heading-para">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s.
+            </p>
+          </div>
+        </div>
 
-  <div class="texts">
-    <div class="heading">
-      <div class="heading-text">
-        <h1>Bringing Dreams to Life in UAE</h1>
-      </div>
-      <div class="heading-para">
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s.
-        </p>
+        <div class="stats">
+          <div class="stat">
+            <h2>17+</h2>
+            <p>Years</p>
+          </div>
+          <div class="stat">
+            <h2>100+</h2>
+            <p>Clients</p>
+          </div>
+          <div class="stat">
+            <h2>300+</h2>
+            <p>Projects</p>
+          </div>
+        </div>
+
+        <div class="para">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+        </div>
+
+        <div class="btn-container">
+          <button class="btnx">
+            <span>About us</span><span class="arrow-box">→</span>
+          </button>
+          <button class="btn-secondary">Learn More</button>
+        </div>
       </div>
     </div>
-
-    <div class="stats">
-      <div class="stat">
-        <h2>17+</h2>
-        <p>Years</p>
-      </div>
-      <div class="stat">
-        <h2>100+</h2>
-        <p>Clients</p>
-      </div>
-      <div class="stat">
-        <h2>300+</h2>
-        <p>Projects</p>
-      </div>
-    </div>
-
-    <div class="para">
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-    </div>
-
-    <div class="btn-container">
-      <button class="btnx"><span>About us</span><span class="arrow-box">→</span></button>
-      <button class="btn-secondary">Learn More</button>
-    </div>
-  </div>
-  
-</div>
-
   </body>
 </html>
