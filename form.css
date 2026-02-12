@@ -1,12 +1,13 @@
-/* Reset / base for the form container */
+
 .cntct-form {
-    max-width: 500px;           /* adjust as needed */
+    max-width: 500px;         
     margin: 40px auto;
     padding: 30px 25px;
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 8px 30px rgba(0,0,0,0.08);
     border: 1px solid #e0e0e0;
+    border-color:#066B71;
 }
 
 /* List and items */
@@ -23,7 +24,7 @@
 
 .input-data.hlf-width {
     display: inline-block;
-    width: 48%;
+    width: 46%;
     margin-right: 4%;
 }
 
@@ -31,13 +32,12 @@
     margin-right: 0;
 }
 
-/* The magic wrapper */
 .frm-wrap {
     position: relative;
     display: block;
 }
 
-/* Input / textarea base styles */
+/* Input box  textarea */
 .cntct-form-control,
 .textarea-field {
     width: 100%;
@@ -55,10 +55,7 @@
     resize: vertical;
 }
 
-/* Remove default placeholder opacity trick */
-.cntct-form-control::placeholder {
-    opacity: 0;
-}
+
 
 /* Floating label */
 .frm-wrap label {
