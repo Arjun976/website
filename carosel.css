@@ -1,0 +1,91 @@
+/* 
+  This is a universal reset. It removes default browser margins and paddings,
+  ensuring your layout looks consistent across different browsers.
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 
+  HOW IT WORKS: The Carousel Container (.carousel)
+  - This is the visible 'window' or 'viewfinder' for your slides.
+  - 'overflow: hidden;' is the MOST IMPORTANT property. It hides the parts of the 
+    '.carousel-track' that are outside its boundaries, so you only see one slide at a time.
+  - 'position: relative;' is useful if you ever want to add 'next'/'previous' buttons 
+    and position them absolutely within this container.
+*/
+.carousel {
+  width: 90%;
+  height: 300px;
+  margin: 50px auto; /* Centers the carousel horizontally on the page */
+  overflow: hidden;        /* IMPORTANT */
+  position: relative;
+}
+
+/* 
+  HOW IT WORKS: The Track (.carousel-track)
+  - This element holds all your slides. We use 'display: flex' to arrange them in a single horizontal line.
+  - The width is calculated as: (Number of Slides) * 100%. 
+    You have 6 slides, so the total width is 600%. This makes the track six times wider than the '.carousel' window.
+*/
+.carousel-track {
+  display: flex;
+  width: 600%;             /* CORRECTED: Was 300% for 3 slides, now 600% for 6. */
+  animation: slide 20s infinite; /* Applies the 30-second 'slide' animation on a loop. */
+}
+
+/* 
+  HOW IT WORKS: The Slides (.slide)
+  - Each slide needs to occupy its portion of the track.
+  - Since the track is 600% wide and there are 6 slides, each slide takes up 1/6th of the track's width.
+    (100% / 6 slides = 16.666%).
+*/
+.slide {
+  width: 16.666%; /* This is 100% divided by 6 slides */
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background: #333;
+  color: white;
+}
+
+/* 
+  HOW IT WORKS: The Animation (@keyframes)
+  - This is where the movement happens. We are telling the '.carousel-track' how to move over time.
+  - 'transform: translateX()' moves the element horizontally. We use negative values to move it to the left.
+  - The track moves left in steps. Each step is the width of one slide (16.666%).
+  - The keyframe percentages (0%, 15%, 16.6%, etc.) control the timing. We create a 'pause' on 
+    each slide by setting the same 'transform' value for a start and end time.
+*/
+@keyframes slide {
+  /* Start on Slide 1 */
+  0%   { transform: translateX(0%); }
+  15%  { transform: translateX(0%); } /* Hold on Slide 1 for 15% of the animation time */
+
+  /* Move to Slide 2 */
+  16.6%  { transform: translateX(-16.666%); }
+  31.6%  { transform: translateX(-16.666%); } /* Hold on Slide 2 */
+
+  /* Move to Slide 3 */
+  33.3%  { transform: translateX(-33.332%); }
+  48.3%  { transform: translateX(-33.332%); } /* Hold on Slide 3 */
+
+  /* Move to Slide 4 */
+  50%    { transform: translateX(-49.998%); }
+  65%    { transform: translateX(-49.998%); } /* Hold on Slide 4 */
+
+  /* Move to Slide 5 */
+  66.6%  { transform: translateX(-66.664%); }
+  81.6%  { transform: translateX(-66.664%); } /* Hold on Slide 5 */
+
+  /* Move to Slide 6 */
+  83.3%  { transform: translateX(-83.33%); }
+  98%    { transform: translateX(-83.33%); } /* Hold on Slide 6 */
+
+  /* At 100%, snap back to the start to create the infinite loop */
+  100%   { transform: translateX(0%); }
+}
