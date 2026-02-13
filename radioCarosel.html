@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="radioCarosel.css">
+</head>
+<body>
+    <div class="carousel-container">
+        <!-- Radio buttons to control the slides -->
+        <input type="radio" id="slide-radio-1" name="carousel-radios">
+        <input type="radio" id="slide-radio-2" name="carousel-radios">
+        <input type="radio" id="slide-radio-3" name="carousel-radios">
+        <input type="radio" id="slide-radio-4" name="carousel-radios">
+        <input type="radio" id="slide-radio-5" name="carousel-radios">
+        <input type="radio" id="slide-radio-6" name="carousel-radios">
+
+        <!-- The track that holds all the slides -->
+        <div class="carousel-track">
+            <div class="slide">Slide 1</div>
+            <div class="slide">Slide 2</div>
+            <div class="slide">Slide 3</div>
+            <div class="slide">Slide 4</div>
+            <div class="slide">Slide 5</div>
+            <div class="slide">Slide 6</div>
+            <div class="slide">Slide 1</div> <!-- Duplicate slide for seamless loop -->
+        </div>
+
+        <!-- Navigation dots -->
+        <div class="carousel-nav">
+            <label for="slide-radio-1" class="nav-dot"></label>
+            <label for="slide-radio-2" class="nav-dot"></label>
+            <label for="slide-radio-3" class="nav-dot"></label>
+            <label for="slide-radio-4" class="nav-dot"></label>
+            <label for="slide-radio-5" class="nav-dot"></label>
+            <label for="slide-radio-6" class="nav-dot"></label>
+        </div>
+    </div>
+</body>
+</html>

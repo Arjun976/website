@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.carousel-container {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-track {
+    display: flex;
+    width: 700%; /* 7 slides (6 original + 1 duplicate) */
+    transition: transform 0.5s ease-in-out;
+    /* This new seamless animation plays by default */
+    animation: auto-slide-seamless 24s infinite;
+}
+
+.slide {
+    width: 14.285%; /* 100% / 7 slides */
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background: #333;
+    color: white;
+    font-family: sans-serif;
+}
+
+/* Keyframes for a seamless automatic slideshow with pauses */
+@keyframes auto-slide-seamless {
+    0%, 13% { transform: translateX(0%); }
+    16.6%, 30% { transform: translateX(-14.285%); }
+    33.3%, 46.6% { transform: translateX(-28.570%); }
+    50%, 63.3% { transform: translateX(-42.855%); }
+    66.6%, 80% { transform: translateX(-57.140%); }
+    83.3%, 96.6% { transform: translateX(-71.425%); }
+    /* End on the duplicate slide to make the loop back to 0% seamless */
+    100% { transform: translateX(-85.714%); }
+}
+
+/* Hide the actual radio buttons */
+.carousel-container input[type="radio"] {
+    display: none;
+}
+
+/* Styling for the navigation dots container */
+.carousel-nav {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+/* Styling for the navigation dots (labels) */
+.nav-dot {
+    width: 12px;
+    height: 12px;
+    margin: 0 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-dot:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* --- THE CONTROL LOGIC --- */
+/* When a radio is checked, TURN OFF the animation and set the correct position. */
+/* The translateX values have been updated for the 7-slide layout. */
+
+#slide-radio-1:checked ~ .carousel-track {
+    animation: none;
+    transform: translateX(0%);
+}
+
+#slide-radio-2:checked ~ .carousel-track {
+    animation: none;
+    transform: translateX(-14.285%);
+}
+
+#slide-radio-3:checked ~ .carousel-track {
+    animation: none;
+    transform: translateX(-28.570%);
+}
+
+#slide-radio-4:checked ~ .carousel-track {
+    animation: none;
+    transform: translateX(-42.855%);
+}
+
+#slide-radio-5:checked ~ .carousel-track {
+    animation: none;
+    transform: translateX(-57.140%);
+}
+
+#slide-radio-6:checked ~ .carousel-track {
+    animation: none;
+    transform: translateX(-71.425%);
+}
+
+
+/* --- ACTIVE DOT STYLING --- */
+/* This highlights the dot corresponding to the active slide. */
+
+#slide-radio-1:checked ~ .carousel-nav label[for="slide-radio-1"],
+#slide-radio-2:checked ~ .carousel-nav label[for="slide-radio-2"],
+#slide-radio-3:checked ~ .carousel-nav label[for="slide-radio-3"],
+#slide-radio-4:checked ~ .carousel-nav label[for="slide-radio-4"],
+#slide-radio-5:checked ~ .carousel-nav label[for="slide-radio-5"],
+#slide-radio-6:checked ~ .carousel-nav label[for="slide-radio-6"] {
+    background-color: white;
+}
